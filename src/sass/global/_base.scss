@@ -7,15 +7,33 @@
 }
 html {
   font-size: 62.5%;
+  @include table{
+    font-size: 55%;
+  }
+  @include phone{
+    font-size: 51%;
+  }
 }
 body {
   font-size: 1.6rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Montserrat, sans-serif;
+  img{
+    transition: all .3s;
+    &:hover{
+      transform: scale(1.03);
+    }
+  }
+  button{
+    transition: all .3s;
+    &:hover{
+      transform: scale(1.03);
+    }
+  }
 }
-.container{
+.main-conteiner{
+  position: relative;
   max-width: $max-width;
   margin: 0 auto;
-  overflow: hidden;
 }
 ul{
   list-style: none;
@@ -26,4 +44,14 @@ a{
 }
 li{
   list-style: none;
+}
+.header {
+  &__image {
+      width: 141px;
+      height: 71.88px;
+  }
+}
+button{
+  border: none;
+  outline: none;
 }
