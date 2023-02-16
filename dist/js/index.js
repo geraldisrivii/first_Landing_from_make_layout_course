@@ -22,3 +22,18 @@ button_gamburger.addEventListener("click", () => {
         nav_menu.style.width = "0%"; 
     } 
 })
+// Define function that implement the animation
+function animation(){
+    nav_menu.style.opacity = "1";
+    nav_menu.style.width = "100%";
+}
+// Write counter with recursion
+function counter(){
+    if(nav_menu.style.opacity == "1"){
+        nav_menu.style.opacity = "0";
+        nav_menu.style.width = "0%";
+        setTimeout(() => {
+            counter()
+        }, 1000);
+    }
+}
