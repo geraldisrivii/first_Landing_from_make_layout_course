@@ -1,5 +1,6 @@
 .second-section {
     background-color: #F5F5F5;
+    min-height: calc(100vh - 177px);
     @include table{
         margin-bottom: 100px;
     }
