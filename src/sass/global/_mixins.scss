@@ -1,33 +1,45 @@
 // Clear falling for blocks which is next after float block
 @mixin clearfix {
-    &::after {
-      content: '';
-      display: table;
-      clear: both;
-    }
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
   }
-  @mixin phone {
-    @media ( max-width: $breakpoint_phone ) {
-      @content;
-    }
+}
+
+@mixin phone {
+  @media (max-width: $breakpoint_phone ) {
+    @content;
   }
-  @mixin min_table {
-    @media ( max-width: $breakpoint_min_table ) {
-      @content;
-    }
+}
+
+@mixin min_table {
+  @media (max-width: $breakpoint_min_table ) {
+    @content;
   }
-  @mixin table {
-    @media ( max-width: $breakpoint_table ) {
-      @content;
-    }
+}
+
+@mixin table {
+  @media (max-width: $breakpoint_table ) {
+    @content;
   }
-  @mixin laptop {
-    @media ( max-width: $breakpoint_laptop ) {
-      @content;
-    }
+}
+
+@mixin laptop {
+  @media (max-width: $breakpoint_laptop ) {
+    @content;
   }
-  @mixin adaptive_images {
-    @media ( min-width: $breakpoint_adaptive_image) and (min-resolution: 192dpi) {
-      @content;
-    }
+}
+
+@mixin adaptive_images {
+  @media (min-width: $breakpoint_adaptive_image) and (min-resolution: 192dpi) {
+    @content;
   }
+}
+
+@mixin initial_collapse {
+  visibility: collapse;
+  opacity: 0;
+  transform: translate(0, 20px);
+  transition:  all 2s ease-in-out;
+}

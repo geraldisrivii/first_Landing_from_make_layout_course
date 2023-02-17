@@ -1,6 +1,5 @@
 .second-section {
     background-color: #F5F5F5;
-    min-height: calc(100vh - 177px);
     @include table{
         margin-bottom: 100px;
     }
@@ -39,6 +38,9 @@
     @include table {
         top: 100px;
         left: -40px;
+    }
+    @include phone{
+        top: 50px;
     }
     &__figure {
         position: absolute;
@@ -99,15 +101,11 @@
     }
 }
 
-.icons-box {}
 
 .text-box {
     &__line {
         width: 85px;
     }
-
-    &__header {}
-
     &__text {
         font-weight: 600;
         font-size: 1.6rem;
@@ -120,9 +118,11 @@
 
 .main-target-box {
     display: flex;
-    align-items: center;
+    @include table {
+        justify-content: center;
+    }
     flex-wrap: wrap;
-    justify-content: center;
+    align-items: center;
     gap: 10px;
 
     &__button {
