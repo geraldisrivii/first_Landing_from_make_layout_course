@@ -1,9 +1,0 @@
-@mixin header($color, $size, $weight, $spacing) {
-    color: $color;
-    font-size: $size;
-    font-weight: $weight;
-    letter-spacing: $spacing;
-}
-.header-main{
-    @include header($color: black, $size: 7.2rem, $weight: 600, $spacing: 0em);
-}
