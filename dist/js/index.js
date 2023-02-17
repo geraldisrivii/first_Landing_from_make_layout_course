@@ -19,3 +19,11 @@ button_gamburger.addEventListener("click", () => {
         nav_menu.style.width = "0%";
     }
 })
+
+
+// Get weel-2 
+let weel_2 = document.querySelector(".weel-2");
+let div = document.createElement("div");
+for (let index = 0; index < 16; index++) {
+    weel_2.append(div.cloneNode())
+}
