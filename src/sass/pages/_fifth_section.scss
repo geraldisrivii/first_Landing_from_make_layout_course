@@ -1,0 +1,39 @@
+.fifth-section {
+    position: relative;
+
+    &__image {
+        position: absolute;
+        top: -100px;
+        left: 0;
+        width: 34%;
+        @include initial_collapse;
+        transform: translate(-20px, 0px);
+
+        @include table {
+            width: 70%
+        }
+    }
+}
+
+.fifth-section-container {
+    max-width: $max-width;
+    margin: 0 auto;
+    z-index: 1;
+    position: relative;
+}
+
+.conteiner {
+    display: flex;
+    flex-direction: column;
+    max-width: 557px;
+    margin: 0 0 0 auto;
+    gap: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba($color: rgba(234, 230, 230, .7), $alpha: 0.7);
+    @include initial_collapse;
+    transform: translate(20px, 0px);
+    &__header {
+        /* color: gray; */
+    }
+}

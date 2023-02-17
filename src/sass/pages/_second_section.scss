@@ -1,5 +1,12 @@
 .second-section {
+    height: 80vh;
+    display: flex;
+    align-items: center;
     background-color: #F5F5F5;
+    @include table{
+        overflow: hidden;
+    }
+    position: relative;
     @include table{
         margin-bottom: 100px;
     }
@@ -14,6 +21,25 @@
     @include table {
         justify-content: center;
     }
+    &__weel-1{
+        &_1{
+            visibility: collapse;
+            @include table{
+                visibility: visible;
+                top: -200px;
+                left: -220px;
+            }
+        }
+        &_2{
+            top: 300px;
+            right: 0px;
+            @include table{
+                top: unset;
+                right: -220px;
+                bottom: -200px;
+            }
+        }
+    }
 }
 .image-box {
     transform: none;
@@ -25,7 +51,7 @@
     }
     &__image {
         width: 120%;
-        transform: scale(1);
+        transform: scale(1) translate(0%, -10%);
         @include table{
             width: 90%;
         }
@@ -36,8 +62,8 @@
     left: -100px;
     top: 200px;
     @include table {
-        top: 100px;
-        left: -40px;
+        top: 50px;
+        left: -90px;
     }
     @include phone{
         top: 50px;
